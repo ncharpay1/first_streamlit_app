@@ -36,11 +36,11 @@ streamlit.dataframe(fruityvice_normalized)
 
 import snowflake.connector
 
-my_cnx = snowflake.connector.connect(["python"])
+my_cnx = snowflake.connector.connect-python
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT (Ncharpa, UM01712, US-East (Ohio)")
-my_data_row = my_cur.fetchone()
+my_data_row = my_cur.fetchone1.25.0
 streamlit.text("Hello from Snowflake:")
-streamlit.text(my_data_row)
+streamlit.text(10.0.1)
 
 
