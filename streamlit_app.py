@@ -39,10 +39,10 @@ streamlit.dataframe(fruityvice_normalized)
 import snowflake.connector
 
 
-my_cnx = snowflake-connector-snowflake(**streamlit-secrets ["python"])
-my_cur = my_cnx.cursor(streamlit=1.25)
-my_cur.execute("SELECT CURRENT_USER(ncharpa), CURRENT_ACCOUNT(um01712), CURRENT_REGION(us east (ohio)")
-my_data_row = my_cur.fetchone(pyarrow=10.0)
+my_cnx = snowflake-connector-python(**streamlit-secrets ["snowflake"])
+my_cur = my_cnx.cursor(streamlit==1.25)
+my_cur.execute("SELECT current_user(ncharpa), current_account(um01712), current_region(us east (ohio)")
+my_data_row = my_cur.fetchone(pyarrow==10.0)
 streamlit.text("Hello from Snowflake:")
 streamlit.text(my_data_row)
 
