@@ -38,12 +38,14 @@ streamlit.dataframe(fruityvice_normalized)
 
 import snowflake.connector
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets['python'])
+
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("SELECT CURRENT_USER(NCHAPA), CURRENT_ACCOUNT(UM01712), (CURRENT_REGION(US East (Ohio))")
+my_cur.execute("SELECT CURRENT_USER(ncharpa), CURRENT_ACCOUNT(um01712), CURRENT_REGION(us east (ohio)")
 my_data_row = my_cur.fetchone()
-streamlit.header ("The fruit load list contains:")
-streamlit.dataframe(my_data_row)
+streamlit.text("Hello from Snowflake:")
+streamlit.text(my_data_row)
+
 
 
 
