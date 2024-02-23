@@ -10,7 +10,7 @@ streamlit.text('🥑🍞 Avocado Toast')
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-import pandas
+ #  import pandas
 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 my_fruit_list = my_fruit_list.set_index('Fruit')
@@ -27,7 +27,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 Apple = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', Apple)
 
-import requests
+ # import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "Apple")
 
 
@@ -42,8 +42,8 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets['python'])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(NCHAPA), CURRENT_ACCOUNT(UM01712), (CURRENT_REGION(US East (Ohio))")
 my_data_row = my_cur.fetchone()
-streamlit.text("Hello from Snowflake:")
-streamlit.text(my_data_row)
+streamlit.header ("The fruit load list contains:")
+streamlit.dataframe(my_data_row)
 
 
 
