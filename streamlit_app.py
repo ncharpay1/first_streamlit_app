@@ -41,7 +41,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 
 
-my_cnx =snowflake-connector-python(**streamlit.secrets['snowflake'])
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake-connector-python"])
 my_cur = my_cnx.cursor(1.25)
 my_cur.execute("SELECT CURRENT_USER(ncharpa), CURRENT_ACCOUNT(DJXRCJJ-UM01712), CURRENT_REGION(US East (Ohio)")
 my_data_row = my_cur.fetchone(10.0)
