@@ -20,7 +20,7 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 # New section to display fruityvice api response
 def get_fruityvice_data(this_fruit_choice):
  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
- Take the json version of the response and normalize it
+# Take the json version of the response and normalize it
  fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
  return fruityvice_normalized
 
